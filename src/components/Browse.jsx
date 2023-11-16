@@ -16,7 +16,7 @@ const Browse = () => {
   const GptSearchState = useSelector((store) => store.gpt.gptSearch);
 
   return (
-    <div className=" ">
+    <div className=" w-full ">
       <Header />
       {GptSearchState ? (
         <GptSearch />
