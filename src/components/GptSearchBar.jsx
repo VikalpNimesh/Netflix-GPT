@@ -19,14 +19,15 @@ const GptSearchBar = () => {
       max_tokens: 3000,
       temperature: 0,
     });
+    
 
     console.log(gptResults.choices);
   };
   return (
     <>
-      <div className=" relative   flex justify-center pt-36">
+      <div className=" relative w-screen   flex justify-center pt-36">
         <form
-          className="   bg-black z-30 p-3 rounded-xl "
+          className="   bg-black md:z-30 p-3 rounded-xl "
           onSubmit={(e) => {
             e.preventDefault();
           }}
@@ -34,7 +35,7 @@ const GptSearchBar = () => {
           <input
             ref={searchText}
             type="text"
-            className=" w-[45.25rem] outline-none rounded-xl p-3"
+            className=" sm:w-[45.25rem] relative -z-200 outline-none rounded-xl p-3"
             placeholder={LANG?.[selectedLanguage]?.searchBarText}
           />
           <button
